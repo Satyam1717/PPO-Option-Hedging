@@ -1,0 +1,104 @@
+# Fixed-cost specialist experiment; use a distinct --run-name.
+market:
+  S0: 100.0
+  K: 100.0
+  r: 0.02
+  dt: 0.0039682539682
+  n_steps: 21
+  prior_vol: 0.2
+  vol_window: 5
+regimes:
+  gbm_low_vol:
+    type: gbm
+    mu: 0.02
+    sigma: 0.15
+    pricing_vol: 0.15
+  gbm_high_vol:
+    type: gbm
+    mu: 0.02
+    sigma: 0.4
+    pricing_vol: 0.4
+  heston:
+    type: heston
+    mu: 0.02
+    v0: 0.04
+    kappa: 2.0
+    theta: 0.04
+    xi: 0.35
+    rho: -0.7
+    pricing_vol: 0.2
+hedging:
+  training_cost_rates:
+  - 0.002
+  vol_prior_strength: 5.0
+  premium_mc_paths: 50000
+  premium_seed: 91021
+  transaction_cost_rate: 0.002
+  variance_penalty_lambda: 0.3
+  static_baseline_vol: 0.2
+training:
+  total_timesteps: 1075200
+  rollout_len: 5376
+  n_envs: 128
+  n_epochs: 6
+  n_minibatches: 8
+  learning_rate: 0.0005
+  gamma: 1.0
+  gae_lambda: 0.95
+  clip_range: 0.2
+  entropy_coef: 0.0015
+  vf_coef: 0.5
+  max_grad_norm: 0.5
+  hidden_sizes:
+  - 64
+  - 64
+  policy_kind: band
+  observe_cost: true
+  band_max: 0.3
+  target_kl: 0.025
+  anneal_lr: true
+  torch_threads: 1
+  log_std_init: -1.6
+  seed: 42
+  log_every_updates: 20
+evaluation:
+  n_eval_episodes: 2000
+  seed: 123
+  validation_seed: 456
+  n_validation_episodes: 512
+  cost_rates:
+  - 0.002
+  band_candidates:
+  - 0.0
+  - 0.025
+  - 0.05
+  - 0.1
+  - 0.2
+  bootstrap_samples: 1000
+test_regimes:
+  gbm_interpolation:
+    type: gbm
+    mu: 0.02
+    sigma: 0.25
+    pricing_vol: 0.25
+  gbm_extrapolation:
+    type: gbm
+    mu: 0.02
+    sigma: 0.5
+    pricing_vol: 0.5
+  heston_stress:
+    type: heston
+    mu: 0.02
+    v0: 0.09
+    kappa: 1.0
+    theta: 0.09
+    xi: 0.6
+    rho: -0.8
+    pricing_vol: 0.3
+  volatility_switch:
+    type: switching
+    mu: 0.02
+    sigma: 0.15
+    sigma_after: 0.5
+    switch_fraction: 0.5
+    pricing_vol: 0.37

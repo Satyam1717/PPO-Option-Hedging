@@ -1,0 +1,11 @@
+# Tested on Python 3.12. Exact numerical versions from this execution.
+# The local torch build was 2.7.1+cu118; all computations used CPU.
+numpy==2.2.6
+scipy==1.16.0
+pandas==2.2.3
+matplotlib==3.10.3
+pyyaml==6.0.2
+gymnasium==1.4.0
+farama-notifications==0.0.6
+torch==2.7.1
+pytest==9.1.1

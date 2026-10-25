@@ -1,0 +1,38 @@
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.venv/
+.runtime/
+*.tmp
+models/v2/checkpoint_*.pt
+*.egg-info/
+submission/
+
+# Generated artifacts and local documentation
+/models/
+/results/
+/report/
+/archive/
+/AGENTS.md
+/HOW_IT_WORKS.md
+/RESULTS.md
+/.publish/
+
+# The maintained Python package is under src/hedging/
+/agents/
+/env/
+/evaluation/
+/market/
+/pricing/
+/viz/
+/__init__.py
+/_compat.py
+/config.py
+/exceptions.py
+/logging_setup.py
+
+# Workspace-only packaging and historical verification tools
+/scripts/build_report.py
+/scripts/package_project.py
+/scripts/verify_refactor.py
+/scripts/reproduce.ps1
