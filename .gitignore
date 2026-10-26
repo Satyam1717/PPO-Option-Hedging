@@ -8,8 +8,22 @@ models/v2/checkpoint_*.pt
 *.egg-info/
 submission/
 
+# Keep only the nine final inference agents and their index
+/models/*
+!/models/v2/
+/models/v2/*
+!/models/v2/band_seed42.pt
+!/models/v2/band_seed43.pt
+!/models/v2/band_seed44.pt
+!/models/v2/direct_seed42.pt
+!/models/v2/direct_seed43.pt
+!/models/v2/direct_seed44.pt
+!/models/v2/band_blind_cost_seed42.pt
+!/models/v2/band_blind_cost_seed43.pt
+!/models/v2/band_blind_cost_seed44.pt
+!/models/v2/manifest.json
+
 # Generated artifacts and local documentation
-/models/
 /results/
 /report/
 /archive/

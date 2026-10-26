@@ -1,0 +1,84 @@
+{
+  "schema_version": 1,
+  "model_format_version": 2,
+  "observation_dim": 7,
+  "hidden_sizes": [
+    64,
+    64
+  ],
+  "purpose": "Trained inference agents loaded by hedging.agents.ppo_agent.PPOAgent",
+  "agents": [
+    {
+      "file": "band_blind_cost_seed42.pt",
+      "policy": "band",
+      "observes_cost": false,
+      "seed": 42,
+      "training_steps": 1075200,
+      "sha256": "1b1ed0c1cd864ef11f50807fac079c2d0a376a47a5c08a4cd77e1ee110d58008"
+    },
+    {
+      "file": "band_blind_cost_seed43.pt",
+      "policy": "band",
+      "observes_cost": false,
+      "seed": 43,
+      "training_steps": 1075200,
+      "sha256": "2ff57d6cb28bbd5e475ac8e68fe5e8943828188709f6c70ee606204a5b8cd718"
+    },
+    {
+      "file": "band_blind_cost_seed44.pt",
+      "policy": "band",
+      "observes_cost": false,
+      "seed": 44,
+      "training_steps": 1075200,
+      "sha256": "052d67849d1d406010faeeb9c173ef3a5f995cc8b0ebe70d0ef6968911b78613"
+    },
+    {
+      "file": "band_seed42.pt",
+      "policy": "band",
+      "observes_cost": true,
+      "seed": 42,
+      "training_steps": 1075200,
+      "sha256": "6203d2fe56222f1b07e463b20e72c77b2557682d70737e8acf7fe006999dac3d"
+    },
+    {
+      "file": "band_seed43.pt",
+      "policy": "band",
+      "observes_cost": true,
+      "seed": 43,
+      "training_steps": 1075200,
+      "sha256": "f3330e96c8f8b68ec6f7cd39c02a82b1b2c88f31b42ca05309d535382ef24d13"
+    },
+    {
+      "file": "band_seed44.pt",
+      "policy": "band",
+      "observes_cost": true,
+      "seed": 44,
+      "training_steps": 1075200,
+      "sha256": "e360c1729411af4a698c3374fbd2d427a9becfe24bca6b880332ffe01ea5a14a"
+    },
+    {
+      "file": "direct_seed42.pt",
+      "policy": "direct",
+      "observes_cost": true,
+      "seed": 42,
+      "training_steps": 1075200,
+      "sha256": "7548d12ac61094594941db59bb6dba6bb6548f7d2ec4f8d604e9778521a9b73f"
+    },
+    {
+      "file": "direct_seed43.pt",
+      "policy": "direct",
+      "observes_cost": true,
+      "seed": 43,
+      "training_steps": 1075200,
+      "sha256": "95bd14733b2072da617c92397f1e1613ead61db6a3bddd4edc8982868dcf2e89"
+    },
+    {
+      "file": "direct_seed44.pt",
+      "policy": "direct",
+      "observes_cost": true,
+      "seed": 44,
+      "training_steps": 1075200,
+      "sha256": "326508075beee9c7f3a117f9642533c92c6101950cb619058894acd3f993f12d"
+    }
+  ]
+}
