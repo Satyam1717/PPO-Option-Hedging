@@ -5,6 +5,19 @@ costs, and GBM, Heston, and switching-volatility market models.
 
 Project owners: **b23cs1066** and **b23ee1068**.
 
+## Strategy comparison
+
+![Comparison of utility, hedging error, and transaction cost](docs/figures/results_comparison.png)
+
+This figure uses the full evaluation: seven markets, four fee levels, and
+2,000 simulated paths per market. PPO values average three training seeds;
+all 28 market/fee settings receive equal weight. Higher utility is better,
+while lower RMSE and trading cost are better.
+
+Band PPO has a slightly higher average utility score than the tuned delta
+band, but a higher RMSE. The graph shows simulated results and does not
+include uncertainty bars. The commands below let you reproduce the comparison.
+
 ## Install
 
 Python 3.12 is the tested version. Run these commands in Windows Command Prompt:
@@ -48,7 +61,8 @@ python scripts\plot_results.py
 
 The evaluator automatically selects the nine final agents. It saves metrics,
 paired comparisons, simulated outcomes, and figures under `results/v2/`.
-Generated outputs stay local and are ignored by Git.
+Detailed generated outputs stay local and are ignored by Git. The selected
+README image is stored separately in `docs/figures/`.
 
 ## Which agents are included?
 
@@ -123,5 +137,6 @@ checkpoints, trial models, and generated outputs are excluded.
 | `src/hedging/viz/` | Plotting functions |
 | `config/` | Experiment settings |
 | `models/v2/` | Nine trained inference agents and their checksum index |
+| `docs/figures/` | Selected comparison image displayed in this README |
 | `scripts/` | Training, evaluation, analysis, and execution commands |
 | `tests/` | Automated checks |
