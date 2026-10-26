@@ -5,6 +5,8 @@ costs, and GBM, Heston, and switching-volatility market models.
 
 Project owners: **b23cs1066** and **b23ee1068**.
 
+Contributor: [Shivam-252005](https://github.com/Shivam-252005).
+
 ## Strategy comparison
 
 ![Comparison of utility, hedging error, and transaction cost](docs/figures/results_comparison.png)
